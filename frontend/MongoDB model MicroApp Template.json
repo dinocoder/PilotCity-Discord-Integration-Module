@@ -1,0 +1,914 @@
+{
+    "GUID": "551ee350-c155-11ea-9c9e-a7eee704cb70",
+    "modelName": "MicroApp Template",
+    "code": "",
+    "lastModifTS": "2020-07-14T03:08:52.545Z",
+    "persistenceSchemaVersion": "4",
+    "description": "",
+    "comments": "",
+    "author": "",
+    "version": "",
+    "collections": [
+        {
+            "GUID": "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+            "collectionName": "MApracticelog",
+            "code": "",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "955b7000-c155-11ea-9c9e-a7eee704cb70",
+                    "name": "_id",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {
+                        "name": false
+                    }
+                },
+                {
+                    "GUID": "91306720-c159-11ea-9c9e-a7eee704cb70",
+                    "name": "team_id",
+                    "code": "",
+                    "type": "objectId",
+                    "description": "",
+                    "comments": "",
+                    "required": true,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "ece94770-c15a-11ea-9c9e-a7eee704cb70",
+                    "childRelationships": [],
+                    "foreignCollection": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                    "foreignField": [
+                        "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                        "ae152bc0-c157-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "primaryKey": false,
+                    "dependencies": [],
+                    "format": "",
+                    "sample": "",
+                    "default": "",
+                    "error": {}
+                },
+                {
+                    "type": "document",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "properties": [
+                        {
+                            "type": "numeric",
+                            "mode": "integer32",
+                            "unit": "",
+                            "minimum": "",
+                            "exclusiveMinimum": false,
+                            "maximum": "",
+                            "exclusiveMaximum": false,
+                            "multipleOf": "",
+                            "divisibleBy": "",
+                            "default": "",
+                            "primaryKey": false,
+                            "relationshipType": "Foreign Key",
+                            "parentRelationship": "9f4a7d00-c168-11ea-9c9e-a7eee704cb70",
+                            "childRelationships": [],
+                            "foreignCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                            "foreignField": [
+                                "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                                "23461620-c158-11ea-9c9e-a7eee704cb70"
+                            ],
+                            "enum": [],
+                            "sample": "",
+                            "GUID": "8d6864d0-c168-11ea-9c9e-a7eee704cb70",
+                            "name": "^[a-zA-Z0-9_.-]+$",
+                            "code": "",
+                            "description": "",
+                            "comments": "",
+                            "dependencies": [],
+                            "required": false,
+                            "id": "",
+                            "sampleName": "",
+                            "isPatternField": true
+                        },
+                        {
+                            "type": "timestamp",
+                            "primaryKey": false,
+                            "relationshipType": "",
+                            "parentRelationship": "",
+                            "childRelationships": [],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "default": "",
+                            "format": "",
+                            "sample": "",
+                            "GUID": "17d820a0-c57f-11ea-858c-11d45ba0f11c",
+                            "name": "lastModified",
+                            "code": "",
+                            "description": "",
+                            "comments": "",
+                            "dependencies": [],
+                            "required": false,
+                            "id": "",
+                            "hackoladeMeta": {},
+                            "error": {
+                                "name": false
+                            }
+                        }
+                    ],
+                    "dependencies": [],
+                    "minProperties": "",
+                    "maxProperties": "",
+                    "additionalProperties": true,
+                    "enum": [],
+                    "GUID": "c70ed6b0-c159-11ea-9c9e-a7eee704cb70",
+                    "name": "log",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "required": false,
+                    "id": "",
+                    "hackoladeMeta": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "77637890-c155-11ea-9c9e-a7eee704cb70"
+            },
+            "capped": false,
+            "validationLevel": "Moderate",
+            "validationAction": "Error",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70",
+            "hackoladeMeta": {
+                "validationErrors": {
+                    "collectionName": false
+                }
+            }
+        },
+        {
+            "GUID": "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+            "collectionName": "MApracticelogOpts",
+            "code": "",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "2d1a6270-c15b-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "4a3404a0-c157-11ea-9c9e-a7eee704cb70",
+                    "name": "_id",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {}
+                },
+                {
+                    "type": "array",
+                    "properties": [
+                        {
+                            "type": "string",
+                            "minLength": "",
+                            "maxLength": "",
+                            "pattern": "",
+                            "format": "",
+                            "default": "",
+                            "primaryKey": false,
+                            "relationshipType": "",
+                            "parentRelationship": "",
+                            "childRelationships": [],
+                            "foreignCollection": "",
+                            "foreignField": [],
+                            "enum": [],
+                            "sample": "",
+                            "GUID": "7cccd430-c159-11ea-9c9e-a7eee704cb70",
+                            "description": "",
+                            "comments": "",
+                            "required": false,
+                            "id": "",
+                            "hackoladeMeta": {},
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "additionalItems": true,
+                    "minItems": 1,
+                    "maxItems": 5,
+                    "uniqueItems": false,
+                    "enum": [],
+                    "GUID": "7ccc10e0-c159-11ea-9c9e-a7eee704cb70",
+                    "name": "instructions",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {
+                        "minItems": false,
+                        "maxItems": false
+                    }
+                },
+                {
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "unit": "",
+                    "minimum": -1,
+                    "exclusiveMinimum": false,
+                    "maximum": "",
+                    "exclusiveMaximum": false,
+                    "multipleOf": "",
+                    "divisibleBy": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "af146160-c159-11ea-9c9e-a7eee704cb70",
+                    "name": "minReq",
+                    "code": "",
+                    "description": "minimum requirement to complete this microapp\n",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {
+                        "name": false
+                    }
+                },
+                {
+                    "type": "numeric",
+                    "mode": "integer32",
+                    "unit": "",
+                    "minimum": "",
+                    "exclusiveMinimum": false,
+                    "maximum": "",
+                    "exclusiveMaximum": false,
+                    "multipleOf": "",
+                    "divisibleBy": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "800ff140-c159-11ea-9c9e-a7eee704cb70",
+                    "name": "goal",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "3e6c1e50-c157-11ea-9c9e-a7eee704cb70"
+            },
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70",
+            "hackoladeMeta": {
+                "validationErrors": {
+                    "collectionName": false
+                }
+            }
+        },
+        {
+            "GUID": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+            "collectionName": "team",
+            "code": "",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "ece94770-c15a-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "ae152bc0-c157-11ea-9c9e-a7eee704cb70",
+                    "name": "_id",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {}
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "a6e0fe60-c157-11ea-9c9e-a7eee704cb70",
+                    "name": "teamName",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {
+                        "name": false
+                    }
+                },
+                {
+                    "type": "array",
+                    "properties": [
+                        {
+                            "type": "objectId",
+                            "format": "",
+                            "primaryKey": false,
+                            "relationshipType": "Foreign Key",
+                            "parentRelationship": "46c96e20-c172-11ea-9c9e-a7eee704cb70",
+                            "childRelationships": [],
+                            "foreignCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                            "foreignField": [
+                                "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                                "23461620-c158-11ea-9c9e-a7eee704cb70"
+                            ],
+                            "sample": "",
+                            "GUID": "63bb4990-c159-11ea-9c9e-a7eee704cb70",
+                            "description": "",
+                            "comments": "",
+                            "required": false,
+                            "id": "",
+                            "hackoladeMeta": {},
+                            "arrayItem": true,
+                            "arrayParentType": "array"
+                        }
+                    ],
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "67e78e20-c159-11ea-9c9e-a7eee704cb70",
+                    "childRelationships": [],
+                    "foreignCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                    "foreignField": [
+                        "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                        "23461620-c158-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "additionalItems": true,
+                    "minItems": "",
+                    "maxItems": "",
+                    "uniqueItems": true,
+                    "enum": [],
+                    "GUID": "cf777750-c157-11ea-9c9e-a7eee704cb70",
+                    "name": "user_ids",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "9ee191c0-c157-11ea-9c9e-a7eee704cb70"
+            },
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70",
+            "hackoladeMeta": {
+                "validationErrors": {
+                    "collectionName": false
+                }
+            }
+        },
+        {
+            "GUID": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+            "collectionName": "users",
+            "code": "",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "5cb16080-c159-11ea-9c9e-a7eee704cb70",
+                        "67e78e20-c159-11ea-9c9e-a7eee704cb70",
+                        "9f4a7d00-c168-11ea-9c9e-a7eee704cb70",
+                        "46c96e20-c172-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "23461620-c158-11ea-9c9e-a7eee704cb70",
+                    "name": "_id",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {}
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "2fe3c300-c158-11ea-9c9e-a7eee704cb70",
+                    "name": "name",
+                    "code": "",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "hackoladeMeta": {},
+                    "error": {
+                        "name": false
+                    }
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "2d1a6270-c15b-11ea-9c9e-a7eee704cb70",
+                    "childRelationships": [],
+                    "foreignCollection": "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+                    "foreignField": [
+                        "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+                        "4a3404a0-c157-11ea-9c9e-a7eee704cb70"
+                    ],
+                    "sample": "",
+                    "GUID": "036c37f0-c15b-11ea-9c9e-a7eee704cb70",
+                    "name": "practicelog_id",
+                    "code": "",
+                    "description": "Practice log ID used for purposes of the microapp template\n",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "hackoladeMeta": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "edf05e90-c157-11ea-9c9e-a7eee704cb70"
+            },
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70",
+            "hackoladeMeta": {
+                "validationErrors": {
+                    "collectionName": false
+                }
+            }
+        }
+    ],
+    "buckets": [
+        {
+            "GUID": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70",
+            "name": "microapp",
+            "code": "",
+            "type": "bucket",
+            "description": "",
+            "comments": "",
+            "collectionIds": [
+                "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+                "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+                "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                "edee89d0-c157-11ea-9c9e-a7eee704cb70"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "hackoladeMeta": {
+                "validationErrors": {
+                    "name": false
+                }
+            }
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "GUID": "67e78e20-c159-11ea-9c9e-a7eee704cb70",
+            "name": "fk users._id to team.user_ids",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+            "parentField": [
+                [
+                    "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                    "23461620-c158-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childCollection": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+            "childField": [
+                [
+                    "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                    "cf777750-c157-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "ece94770-c15a-11ea-9c9e-a7eee704cb70",
+            "name": "fk team._id to ma-practicelog.team_id",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+            "parentField": [
+                [
+                    "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                    "ae152bc0-c157-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childCollection": "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+            "childField": [
+                [
+                    "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+                    "91306720-c159-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "2d1a6270-c15b-11ea-9c9e-a7eee704cb70",
+            "name": "fk ma-practicelog-opts._id to users.practicelog_id",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+            "parentField": [
+                [
+                    "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+                    "4a3404a0-c157-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+            "childField": [
+                [
+                    "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                    "036c37f0-c15b-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "0a99e360-c160-11ea-9c9e-a7eee704cb70",
+            "name": "up",
+            "description": "",
+            "comments": "",
+            "relationshipType": "",
+            "parentCollection": "",
+            "parentField": [],
+            "parentCardinality": "1",
+            "childCollection": "",
+            "childField": [],
+            "childCardinality": "1",
+            "lineSize": 2
+        },
+        {
+            "GUID": "9f4a7d00-c168-11ea-9c9e-a7eee704cb70",
+            "name": "fk users._id to MApracticelog.log.^[a-zA-Z0-9_.-]+$",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+            "parentField": [
+                [
+                    "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                    "23461620-c158-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childCollection": "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+            "childField": [
+                [
+                    "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+                    "c70ed6b0-c159-11ea-9c9e-a7eee704cb70",
+                    "8d6864d0-c168-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "46c96e20-c172-11ea-9c9e-a7eee704cb70",
+            "name": "fk users._id to team.user_ids.[0]",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+            "parentField": [
+                [
+                    "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                    "23461620-c158-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childCollection": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+            "childField": [
+                [
+                    "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                    "cf777750-c157-11ea-9c9e-a7eee704cb70",
+                    "63bb4990-c159-11ea-9c9e-a7eee704cb70"
+                ]
+            ],
+            "childCardinality": "1"
+        }
+    ],
+    "users": [],
+    "idToNameHashTable": {
+        "5da6e0e0-c155-11ea-9c9e-a7eee704cb70": "microapp",
+        "77617cc0-c155-11ea-9c9e-a7eee704cb70": "MApracticelog",
+        "955b7000-c155-11ea-9c9e-a7eee704cb70": "_id",
+        "3e6a70a0-c157-11ea-9c9e-a7eee704cb70": "MApracticelogOpts",
+        "4a3404a0-c157-11ea-9c9e-a7eee704cb70": "_id",
+        "9ee00b20-c157-11ea-9c9e-a7eee704cb70": "team",
+        "ae152bc0-c157-11ea-9c9e-a7eee704cb70": "_id",
+        "a6e0fe60-c157-11ea-9c9e-a7eee704cb70": "teamName",
+        "cf777750-c157-11ea-9c9e-a7eee704cb70": "user_ids",
+        "edee89d0-c157-11ea-9c9e-a7eee704cb70": "users",
+        "23461620-c158-11ea-9c9e-a7eee704cb70": "_id",
+        "2fe3c300-c158-11ea-9c9e-a7eee704cb70": "name",
+        "67e78e20-c159-11ea-9c9e-a7eee704cb70": "fk users._id to team.user_ids",
+        "7ccc10e0-c159-11ea-9c9e-a7eee704cb70": "instructions",
+        "800ff140-c159-11ea-9c9e-a7eee704cb70": "goal",
+        "91306720-c159-11ea-9c9e-a7eee704cb70": "team_id",
+        "af146160-c159-11ea-9c9e-a7eee704cb70": "minReq",
+        "c70ed6b0-c159-11ea-9c9e-a7eee704cb70": "log",
+        "ece94770-c15a-11ea-9c9e-a7eee704cb70": "fk team._id to ma-practicelog.team_id",
+        "036c37f0-c15b-11ea-9c9e-a7eee704cb70": "practicelog_id",
+        "2d1a6270-c15b-11ea-9c9e-a7eee704cb70": "fk ma-practicelog-opts._id to users.practicelog_id",
+        "0a99e360-c160-11ea-9c9e-a7eee704cb70": "up",
+        "8d6864d0-c168-11ea-9c9e-a7eee704cb70": "^[a-zA-Z0-9_.-]+$",
+        "9f4a7d00-c168-11ea-9c9e-a7eee704cb70": "fk users._id to MApracticelog.log.^[a-zA-Z0-9_.-]+$",
+        "46c96e20-c172-11ea-9c9e-a7eee704cb70": "fk users._id to team.user_ids.[0]",
+        "6736ce30-c179-11ea-9c9e-a7eee704cb70": "New_Database",
+        "17d820a0-c57f-11ea-858c-11d45ba0f11c": "lastModified"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "551ee351-c155-11ea-9c9e-a7eee704cb70"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "551ee352-c155-11ea-9c9e-a7eee704cb70"
+    },
+    "decorativeSymbols": [],
+    "dbVersion": "v4.4",
+    "dbVendor": "MongoDB",
+    "hideModelViews": true,
+    "appTarget": "MONGODB",
+    "creationTS": "2020-07-08T19:58:03.269Z",
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "4.1.8"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "77617cc0-c155-11ea-9c9e-a7eee704cb70",
+                        "x": 476,
+                        "y": 210,
+                        "width": 240,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "3e6a70a0-c157-11ea-9c9e-a7eee704cb70",
+                        "x": 124,
+                        "y": 80,
+                        "width": 240,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "9ee00b20-c157-11ea-9c9e-a7eee704cb70",
+                        "x": 475,
+                        "y": 83,
+                        "width": 240,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "edee89d0-c157-11ea-9c9e-a7eee704cb70",
+                        "x": 121,
+                        "y": 211,
+                        "width": 240,
+                        "height": 100,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 81,
+                        "y": 40,
+                        "GUID": "5da6e0e0-c155-11ea-9c9e-a7eee704cb70"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "selectedCollections": [],
+                "decorativeSymbols": [],
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "hideRelationshipName": false,
+                    "showPropertiesBoxes": false,
+                    "nameAlongTheLine": false,
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "displayColorPicker": false,
+                "nestedCollectionsLayout": "horizontal"
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "details": true,
+            "hideErdDetails": false,
+            "shouldDistributeCollections": false
+        }
+    }
+}

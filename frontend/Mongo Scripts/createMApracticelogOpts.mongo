@@ -1,0 +1,5 @@
+db.MApracticelogOpts.insertOne({
+    instructions:["You must work very hard", "And very fast"],
+    min_req:90,
+    goal:1000
+})

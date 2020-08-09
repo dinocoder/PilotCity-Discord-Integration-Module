@@ -1,0 +1,125 @@
+.module-link{
+  display: flex;
+  justify-content: center;
+}
+.module-link{
+ &__container{
+   max-width: 100%;
+   max-width: 550px;
+ }
+ &__description{
+   margin-bottom: 24px;
+   & div[contenteditable]{
+     width: 100%;
+     min-height: 80px;
+     border: 1px #bdbdbd solid;
+     border-radius: 10px;
+     padding: 15px;
+   }
+   &-label{
+     margin-left: 15px;
+     margin-bottom: 17px;
+   }
+ }
+ &__linkexisting{
+  margin-bottom: 24px;
+  & div[contenteditable]{
+    width: 35%;
+    min-height: 10px;
+    border: 1px #bdbdbd solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 30px;
+  }
+  &-label{
+    margin-left: 15px;
+    margin-bottom: 17px;
+  }
+}
+ &__instructions{
+   display: flex;
+   flex-direction: column;
+   &-item{
+     width: 111.5%;
+     display: flex;
+     left: -11.5%;
+     position: relative;
+     margin-bottom: 24px;
+   }
+   &-av{
+     position: float;
+     border: 1px #bdbdbd solid;
+   }
+   &-text{
+     width: 100%;
+     border: 1px #bdbdbd solid;
+     border-radius: 10px;
+     padding: 7px 15px;
+     margin-left: 4%;
+   }
+   &-add{
+     padding: 7px 15px;
+     border-radius: 10px;
+     border: 1px #bdbdbd dashed;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     &-icon.theme--light.v-icon{
+       color: #bdbdbd;
+     }
+   }
+    @media only screen and (max-width: 600px){
+    .module-link__instructions{
+      &-item{
+        left: 0%;
+        width: 100%;
+      }
+      &-text{
+        margin-left: 0px;
+      }
+    }
+  }
+ }
+ &__actions{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   column-gap: 25px;
+   margin-top: 32px;
+   &-cancel{
+     display: flex;
+     height: 40px;
+     align-items: center;
+     justify-content: center;
+   }
+   &-joinserver{
+     &.theme--light.v-btn{
+       color: #000;
+       font-weight: 900;
+       width: 100%;
+       margin-left: 125px;
+       margin-bottom: 50px;
+     }
+   }
+   &-hasaccount{
+    &.theme--light.v-btn{
+      color: #000;
+      font-weight: 900;
+      width: 100%;
+      margin: 1000px;
+    }
+   }
+ }
+  @media only screen and (max-width: 600px){
+    .module-link__actions{
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      &-cancel{
+        grid-row: 2;
+      }
+      &-save{
+        grid-row: 1;
+      }
+    }
+  }
+}

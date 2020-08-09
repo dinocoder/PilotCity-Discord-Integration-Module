@@ -1,0 +1,41 @@
+.module-default{
+  max-height: 725px;
+  overflow: hidden;
+  & .hr{
+    border-bottom: 1px var(--v-secondary-base) solid;
+  }
+}
+.module-default{
+  &.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__container{
+    display: flex;
+    margin-top: 64px;
+    max-width: 236px;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__input{
+    &-text div.v-input__slot input{
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 900;
+      padding: 40px 38px;
+    }
+    &-btn{
+      padding: 14px inherit;
+      margin-bottom: 48px;
+    }
+  }
+  &__caption{
+    margin-bottom: 40px;
+  }
+  &__time{
+    margin-bottom: 120px;
+  }
+
+}

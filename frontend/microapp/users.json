@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "users",
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+        },
+        "name": {
+            "type": "string"
+        },
+        "practicelog_id": {
+            "type": "string",
+            "description": "Practice log ID used for purposes of the microapp template\n",
+            "pattern": "^[a-fA-F0-9]{24}$"
+        }
+    },
+    "required": [
+        "_id",
+        "name"
+    ]
+}

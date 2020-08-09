@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "MApracticelogOpts",
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+        },
+        "instructions": {
+            "type": "array",
+            "additionalItems": true,
+            "minItems": 1,
+            "maxItems": 5,
+            "uniqueItems": false,
+            "items": {
+                "type": "string"
+            }
+        },
+        "min_req": {
+            "type": "integer",
+            "description": "minimum requirement to complete this microapp\n",
+            "minimum": -1
+        },
+        "goal": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "_id",
+        "instructions",
+        "min_req",
+        "goal"
+    ]
+}

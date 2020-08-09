@@ -1,0 +1,109 @@
+@import "./Module/link.scss";
+@import "./Module/verify.scss";
+
+.module{ //! general
+  display: flex;
+  justify-content: center;
+  margin-top: 12vh;
+  &__container{
+    margin-bottom: 9.4vh;
+    min-width: 308px;
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid #4F4F4F;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.module{ //! top part of module container
+  &__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 175px;
+    width: 175px;
+    border: 1px solid #4f4f4f;
+    position: absolute;
+    top: -50%;
+    background-color: #fff;
+  }
+  &__title{
+    position: relative;
+    min-height: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #4F4F4F;
+    padding-top: calc(175px/2);
+    grid-row: 1/2;
+    grid-column: 1;
+  }
+  &__header{
+    //TODO: change helper classes into css
+    //TODO: theme headers, base_font-size: 8px?
+    margin-bottom: 31px;
+    &-text{
+      display: flex;
+      min-height: 50px;
+      width: 100%;
+      max-width: 400px;
+      flex-wrap: wrap;
+      padding: 10px 80px;
+      border: .5px #4F4F4F solid;
+      border-radius: 10px;
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 600px){
+    .module__image{
+      height: 130px;
+      width: 130px;
+      top: calc(-130px/2);
+    }
+  }
+}
+.module{ //! bottom part of conatiner
+ &__body{
+ }
+ &__pagination{
+   max-width: 100%;
+   justify-content: center;
+   margin-bottom: 38px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 1fr;
+   & > div.active{
+     & .module__pagination-button{
+       color: #000;
+     }
+     & .module__pagination-button--active{
+       background-color: #000;
+     }
+   }
+   &-button{
+     &.v-btn.theme--light{
+       color: #BDBDBD;
+       width: 100%;
+       font-weight: 900;
+     }
+     &--active{
+       width: 100%;
+       height: 6px;
+       border-radius: 0px 0px 5px 5px;
+     }
+   }
+ }
+ &__page{
+   margin-bottom: 130px;
+ }
+  @media only screen and (max-width: 600px){
+    .module__pagination{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+    .module__page{
+      margin-bottom: 70px;
+    }
+  }
+}

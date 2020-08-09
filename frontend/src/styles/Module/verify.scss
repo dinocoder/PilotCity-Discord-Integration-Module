@@ -1,0 +1,75 @@
+.module-verify{
+  display: flex;
+  justify-content: center;
+}
+.module-verify{
+  &__container{
+    max-width: 500px;
+  }
+  &__items{
+    margin-bottom: 240px;
+  }
+  &__labels{
+    margin-bottom: 20px;
+  }
+  &__dropdown{
+    padding: 0 115px;
+    margin-bottom: 40px;
+  }
+  &__select{
+    &.theme--light.v-btn{
+      font-weight: 900;
+    }
+  }
+  &__description{
+    margin-bottom: 24px;
+    & div[contenteditable]{
+      width: 100%;
+      min-height: 80px;
+      border: 1px #bdbdbd solid;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    &-label{
+      margin-left: 15px;
+      margin-bottom: 17px;
+    }
+  }
+  &__profilepicture{
+    width:60px;
+    height:60px;
+    float:left;
+    padding:10px;
+  }
+  &__actions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 25px;
+    min-width: 0%;
+    &-cancel{
+      display: flex;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    &-save{
+      &.theme--light.v-btn{
+        color: #000;
+        font-weight: 900;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px){
+    .module-instruct__actions{
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      &-cancel{
+        grid-row: 2;
+      }
+      &-save{
+        grid-row: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "team",
+    "additionalProperties": false,
+    "properties": {
+        "_id": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+        },
+        "team_name": {
+            "type": "string"
+        },
+        "user_ids": {
+            "type": "array",
+            "additionalItems": true,
+            "uniqueItems": true,
+            "items": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{24}$"
+            }
+        }
+    },
+    "required": [
+        "_id",
+        "team_name",
+        "user_ids"
+    ]
+}

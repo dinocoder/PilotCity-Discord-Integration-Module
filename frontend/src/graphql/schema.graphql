@@ -1,0 +1,329 @@
+type DeleteManyPayload {
+  deletedCount: Int!
+}
+
+type InsertManyPayload {
+  insertedIds: [ObjectId]!
+}
+
+type MApracticelog {
+  _id: String!
+  log: MApracticelogLog
+  team_id: String!
+}
+
+input MApracticelogInsertInput {
+  log: MApracticelogLogInsertInput
+  _id: String
+  team_id: String!
+}
+
+type MApracticelogLog {
+  created: String
+}
+
+input MApracticelogLogInsertInput {
+  created: String
+}
+
+input MApracticelogLogQueryInput {
+  created_exists: Boolean
+  created_ne: String
+  created_gt: String
+  created_gte: String
+  created_lte: String
+  AND: [MApracticelogLogQueryInput!]
+  created_nin: [String]
+  created_in: [String]
+  created_lt: String
+  created: String
+  OR: [MApracticelogLogQueryInput!]
+}
+
+input MApracticelogLogUpdateInput {
+  created_unset: Boolean
+  created: String
+}
+
+type MApracticelogOpt {
+  _id: String!
+  goal: Int!
+  instructions: [String]!
+  min_req: Int!
+}
+
+input MApracticelogOptInsertInput {
+  _id: String
+  instructions: [String]!
+  min_req: Int!
+  goal: Int!
+}
+
+input MApracticelogOptQueryInput {
+  _id_exists: Boolean
+  _id_in: [String]
+  instructions_exists: Boolean
+  goal_lt: Int
+  min_req_lte: Int
+  _id: String
+  goal_gte: Int
+  min_req_gt: Int
+  goal: Int
+  goal_ne: Int
+  instructions: [String]
+  _id_lt: String
+  min_req_exists: Boolean
+  instructions_in: [String]
+  instructions_nin: [String]
+  goal_gt: Int
+  _id_lte: String
+  min_req_gte: Int
+  AND: [MApracticelogOptQueryInput!]
+  goal_nin: [Int]
+  min_req_in: [Int]
+  goal_in: [Int]
+  min_req_ne: Int
+  goal_exists: Boolean
+  OR: [MApracticelogOptQueryInput!]
+  _id_ne: String
+  min_req_lt: Int
+  min_req: Int
+  goal_lte: Int
+  _id_gt: String
+  min_req_nin: [Int]
+  _id_gte: String
+  _id_nin: [String]
+}
+
+enum MApracticelogOptSortByInput {
+  _ID_ASC
+  _ID_DESC
+  MIN_REQ_ASC
+  MIN_REQ_DESC
+  GOAL_ASC
+  GOAL_DESC
+}
+
+input MApracticelogOptUpdateInput {
+  goal: Int
+  goal_inc: Int
+  _id: String
+  _id_unset: Boolean
+  instructions: [String]
+  instructions_unset: Boolean
+  min_req_unset: Boolean
+  min_req: Int
+  min_req_inc: Int
+  goal_unset: Boolean
+}
+
+input MApracticelogQueryInput {
+  team_id_ne: String
+  team_id_gte: String
+  _id_lte: String
+  team_id_nin: [String]
+  team_id_exists: Boolean
+  _id_in: [String]
+  _id_ne: String
+  _id_gt: String
+  _id_nin: [String]
+  log_exists: Boolean
+  team_id: String
+  team_id_in: [String]
+  _id_exists: Boolean
+  AND: [MApracticelogQueryInput!]
+  team_id_lt: String
+  _id_gte: String
+  team_id_lte: String
+  log: MApracticelogLogQueryInput
+  team_id_gt: String
+  _id_lt: String
+  _id: String
+  OR: [MApracticelogQueryInput!]
+}
+
+enum MApracticelogSortByInput {
+  TEAM_ID_ASC
+  TEAM_ID_DESC
+  _ID_ASC
+  _ID_DESC
+}
+
+input MApracticelogUpdateInput {
+  team_id: String
+  team_id_unset: Boolean
+  log: MApracticelogLogUpdateInput
+  log_unset: Boolean
+  _id: String
+  _id_unset: Boolean
+}
+
+type Mutation {
+  deleteManyMApracticelogOpts(query: MApracticelogOptQueryInput): DeleteManyPayload
+  deleteManyMApracticelogs(query: MApracticelogQueryInput): DeleteManyPayload
+  deleteManyTeams(query: TeamQueryInput): DeleteManyPayload
+  deleteManyUsers(query: UserQueryInput): DeleteManyPayload
+  deleteOneMApracticelog(query: MApracticelogQueryInput!): MApracticelog
+  deleteOneMApracticelogOpt(query: MApracticelogOptQueryInput!): MApracticelogOpt
+  deleteOneTeam(query: TeamQueryInput!): Team
+  deleteOneUser(query: UserQueryInput!): User
+  insertManyMApracticelogOpts(data: [MApracticelogOptInsertInput!]!): InsertManyPayload
+  insertManyMApracticelogs(data: [MApracticelogInsertInput!]!): InsertManyPayload
+  insertManyTeams(data: [TeamInsertInput!]!): InsertManyPayload
+  insertManyUsers(data: [UserInsertInput!]!): InsertManyPayload
+  insertOneMApracticelog(data: MApracticelogInsertInput!): MApracticelog
+  insertOneMApracticelogOpt(data: MApracticelogOptInsertInput!): MApracticelogOpt
+  insertOneTeam(data: TeamInsertInput!): Team
+  insertOneUser(data: UserInsertInput!): User
+  replaceOneMApracticelog(query: MApracticelogQueryInput, data: MApracticelogInsertInput!): MApracticelog
+  replaceOneMApracticelogOpt(query: MApracticelogOptQueryInput, data: MApracticelogOptInsertInput!): MApracticelogOpt
+  replaceOneTeam(query: TeamQueryInput, data: TeamInsertInput!): Team
+  replaceOneUser(query: UserQueryInput, data: UserInsertInput!): User
+  updateManyMApracticelogOpts(query: MApracticelogOptQueryInput, set: MApracticelogOptUpdateInput!): UpdateManyPayload
+  updateManyMApracticelogs(query: MApracticelogQueryInput, set: MApracticelogUpdateInput!): UpdateManyPayload
+  updateManyTeams(query: TeamQueryInput, set: TeamUpdateInput!): UpdateManyPayload
+  updateManyUsers(query: UserQueryInput, set: UserUpdateInput!): UpdateManyPayload
+  updateOneMApracticelog(query: MApracticelogQueryInput, set: MApracticelogUpdateInput!): MApracticelog
+  updateOneMApracticelogOpt(query: MApracticelogOptQueryInput, set: MApracticelogOptUpdateInput!): MApracticelogOpt
+  updateOneTeam(query: TeamQueryInput, set: TeamUpdateInput!): Team
+  updateOneUser(query: UserQueryInput, set: UserUpdateInput!): User
+  upsertOneMApracticelog(query: MApracticelogQueryInput, data: MApracticelogInsertInput!): MApracticelog
+  upsertOneMApracticelogOpt(query: MApracticelogOptQueryInput, data: MApracticelogOptInsertInput!): MApracticelogOpt
+  upsertOneTeam(query: TeamQueryInput, data: TeamInsertInput!): Team
+  upsertOneUser(query: UserQueryInput, data: UserInsertInput!): User
+}
+
+scalar ObjectId
+
+type Query {
+  mApracticelog(query: MApracticelogQueryInput): MApracticelog
+  mApracticelogOpt(query: MApracticelogOptQueryInput): MApracticelogOpt
+  mApracticelogOpts(query: MApracticelogOptQueryInput, limit: Int = 100, sortBy: MApracticelogOptSortByInput): [MApracticelogOpt]!
+  mApracticelogs(query: MApracticelogQueryInput, limit: Int = 100, sortBy: MApracticelogSortByInput): [MApracticelog]!
+  team(query: TeamQueryInput): Team
+  teams(query: TeamQueryInput, limit: Int = 100, sortBy: TeamSortByInput): [Team]!
+  user(query: UserQueryInput): User
+  users(query: UserQueryInput, limit: Int = 100, sortBy: UserSortByInput): [User]!
+}
+
+type Team {
+  _id: String!
+  team_name: String!
+  user_ids: [String]!
+}
+
+input TeamInsertInput {
+  _id: String
+  team_name: String!
+  user_ids: [String]!
+}
+
+input TeamQueryInput {
+  team_name_lte: String
+  team_name: String
+  team_name_ne: String
+  team_name_lt: String
+  _id_gt: String
+  team_name_nin: [String]
+  team_name_gte: String
+  _id_exists: Boolean
+  _id_lte: String
+  team_name_gt: String
+  _id_nin: [String]
+  team_name_in: [String]
+  AND: [TeamQueryInput!]
+  user_ids_exists: Boolean
+  _id_ne: String
+  _id_gte: String
+  _id_lt: String
+  team_name_exists: Boolean
+  user_ids: [String]
+  user_ids_nin: [String]
+  user_ids_in: [String]
+  _id_in: [String]
+  OR: [TeamQueryInput!]
+  _id: String
+}
+
+enum TeamSortByInput {
+  _ID_ASC
+  _ID_DESC
+  TEAM_NAME_ASC
+  TEAM_NAME_DESC
+}
+
+input TeamUpdateInput {
+  _id: String
+  _id_unset: Boolean
+  team_name: String
+  team_name_unset: Boolean
+  user_ids: [String]
+  user_ids_unset: Boolean
+}
+
+type UpdateManyPayload {
+  matchedCount: Int!
+  modifiedCount: Int!
+}
+
+type User {
+  _id: String!
+  name: String!
+  practicelog_id: String
+}
+
+input UserInsertInput {
+  practicelog_id: String
+  _id: String
+  name: String!
+}
+
+input UserQueryInput {
+  _id_nin: [String]
+  name_gt: String
+  name_in: [String]
+  _id_in: [String]
+  _id_exists: Boolean
+  AND: [UserQueryInput!]
+  practicelog_id_ne: String
+  name_nin: [String]
+  _id_lt: String
+  practicelog_id: String
+  name_exists: Boolean
+  _id_lte: String
+  name: String
+  _id_gt: String
+  _id: String
+  practicelog_id_in: [String]
+  _id_gte: String
+  practicelog_id_lte: String
+  name_ne: String
+  name_gte: String
+  practicelog_id_nin: [String]
+  practicelog_id_lt: String
+  name_lt: String
+  practicelog_id_exists: Boolean
+  name_lte: String
+  practicelog_id_gt: String
+  OR: [UserQueryInput!]
+  practicelog_id_gte: String
+  _id_ne: String
+}
+
+enum UserSortByInput {
+  _ID_DESC
+  NAME_ASC
+  NAME_DESC
+  PRACTICELOG_ID_ASC
+  PRACTICELOG_ID_DESC
+  _ID_ASC
+}
+
+input UserUpdateInput {
+  _id: String
+  _id_unset: Boolean
+  name: String
+  name_unset: Boolean
+  practicelog_id: String
+  practicelog_id_unset: Boolean
+}

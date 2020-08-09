@@ -1,0 +1,8 @@
+db.MApracticelog.insertOne({
+    log:{
+        "5f0d221220997574dc3ea815":20,
+    },
+    team_id:ObjectId("5f0d224120997574dc3ea816")
+},{$currentDate:{
+        "log.lastModified":{$type:"timestamp"}
+    },})

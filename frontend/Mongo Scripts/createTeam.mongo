@@ -1,0 +1,4 @@
+db.team.insertOne({
+    team_name:"Fire Ferrets",
+    user_ids:[ObjectId("5f0d221220997574dc3ea815")]
+})
